@@ -15,4 +15,5 @@ cd Turnstile-Solver || {
 
 pip3 install -r requirements.txt --break-system-packages
 
-python3 /root/Desktop/Turnstile-Solver/api_solver.py --headless True --browser_type chrome --host 0.0.0.0
+python3 /root/Desktop/Turnstile-Solver/api_solver.py --headless True --browser_type chrome --useragent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.207 Safari/537.36
+' --host 0.0.0.0
