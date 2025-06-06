@@ -1,0 +1,8 @@
+services:
+  - name: Turnstile-Solver
+    type: web
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt --break-system-packages && python -m camoufox fetch
+    startCommand: python api_solver.py --headless True --browser_type camoufox --host 0.0.0.0
+    autoDeploy: true
