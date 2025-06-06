@@ -16,8 +16,5 @@ cd Turnstile-Solver || {
 
 pip3 install -r requirements.txt --break-system-packages
 
+python3 /root/Desktop/Turnstile-Solver/api_solver.py --browser_type chrome --host 0.0.0.0
 
-if [ "$RUN_API_SOLVER" = "true" ]; then
-    echo "Starting API solver in headful mode..."
-    xvfb-run -a python3 /root/Desktop/Turnstile-Solver/api_solver.py --browser_type chrome --host 0.0.0.0
-fi
