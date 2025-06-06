@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+mkdir -p /root/Desktop
 
 cd /root/Desktop || {
     echo "Failed to change directory to /root/Desktop"
