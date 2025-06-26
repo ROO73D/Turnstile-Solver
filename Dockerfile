@@ -45,7 +45,7 @@ RUN apt-get update && \
     apt-get install -y ./google-chrome-stable_current_amd64.deb && \
     rm ./google-chrome-stable_current_amd64.deb
 
-COPY ./run.sh /usr/bin/
+COPY run.sh /usr/bin/
 RUN chmod +x /usr/bin/run.sh
 
 EXPOSE 3389
