@@ -21,6 +21,7 @@ RUN locale-gen en_US.UTF-8
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    python3\
     git \
     curl \
     wget \
@@ -39,10 +40,7 @@ RUN apt remove -y light-locker xscreensaver && \
     apt autoremove -y && \
     rm -rf /var/cache/apt /var/lib/apt/lists
 
-RUN apt-get update && \
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    apt-get install -y ./google-chrome-stable_current_amd64.deb && \
-    rm ./google-chrome-stable_current_amd64.deb
+RUN python3 -m camoufox fetch
 
 COPY ./run.sh /usr/bin/
 RUN chmod +x /usr/bin/run.sh
