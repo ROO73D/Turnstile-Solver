@@ -40,7 +40,10 @@ RUN apt remove -y light-locker xscreensaver && \
     apt autoremove -y && \
     rm -rf /var/cache/apt /var/lib/apt/lists
 
-RUN python3 -m camoufox fetch
+RUN apt-get update && \
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    apt-get install -y ./google-chrome-stable_current_amd64.deb && \
+    rm ./google-chrome-stable_current_amd64.deb
 
 COPY ./run.sh /usr/bin/
 RUN chmod +x /usr/bin/run.sh
